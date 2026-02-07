@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Butaku Ji ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Foste', 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        color: #000;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    /* Floating Hearts */
+    .heart {
+        position: fixed;
+        bottom: -20px;
+        font-size: 20px;
+        animation: floatUp 6s linear infinite;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-110vh) scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    .page {
+    display: none;
+    max-width: 90%;
+    max-height: 90vh;   /* limit page height */
+    overflow-y: auto;   /* enable scrolling */
+    animation: fade 1s;
+}
+
+    .page.active {
+        display: block;
+    }
+
+    .locked-content {
+        display: none;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        white-space: pre-line;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 28px;
+        border: none;
+        border-radius: 30px;
+        background: #ff4b5c;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #ff1e38;
+    }
+
+    .ready-btn {
+        background: #ff7a8a;
+    }
+
+    @keyframes fade {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 (LOCKED) -->
+<div class="page active">
+<button class="ready-btn" onclick="unlockStart()">Are you ready? 💕</button>
+
+<div class="locked-content" id="startContent">
+<p>
+Hi butaku ji ...
+
+sbse pehale sorry...
+
+apka most expected valentine week bigarne ke liye.. 
+
+janta hu haar din socha hoga tume ki aaj ye day hai vo day h but mazaal hai jo iss adami ne ek baar bhi jikar kiya ho, wish kiya hoo..
+ekcha to aeshi ho rhi hogi kudd du isko... :D
+
+bese ye mere plan ka ek part thaa...
+
+bese ye sach hai mai nhi bnata ye week but ghr bali bhi to jaruri h or kehte h naa sukhad jivan jine ke liye ghar baali khush honi chahiye.. :P
+
+or kuch aadate badalni bhi chahiyeee...
+
+to basss isi liye kuch aesa plan kiya jo shyd yaad rhe hmehsaa.. 
+
+sath nhi to kya hua.. phir bhi valentine to bnayege..
+
+jo ab jesa jesa pdhogi besa besa ussi time krna h.. likhi huyi saari baate follow krna.. same to same.. 
+
+so 
+
+let’s start...
+
+
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+<h1>Happy Rose Day 🌹</h1>
+<p>
+i hope sb kuch time pr hua hoga to tumhe rose mil gye honge..
+i know ye rose tumhe mere haato se milne chahiyee the but ab long distance hai to thoda long distance ka hi mzza le lete h..
+
+kyuki...
+
+“Like a rose, love needs patience, care, and courage to bloom.”
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+<h1>Happy Propose Day 💍</h1>
+<p>
+kya hi Propose kr skta hu.. tumne to kud mujse haa bulvaya thaa.. :)
+
+“If love is a journey, I already know who I want beside me.”
+
+and you know rest.. :)
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+<h1></h1>
+<p>
+to chalo ab thoda gift bhi khol le..
+to ab apko kuch instructions follow krna pdege..
+janta hu manaogi to tum nhi but follow krogi to jada mzza aayega..
+tum to aachi ho naa to chalo maano meri baat..
+kitchen mai jao or ek plate lao..
+kyuuu... yehi soch rhi ho na
+batata hu baba.. aage kaam aayegi.. is liye bula rha hu.
+.
+.
+.
+.
+.
+.
+le gaayi ??
+paaka to nhi hai ki laayi hogi pr thik h.. 
+
+ab jitne bhi alpins dikh rhi h sirf visible bali jo ki red card pr lgi h usse nikalo... ek ek krke
+or alpins ko vo jo plate laane ke liye bol tha na usmai daal do :D..
+.
+.
+.
+.
+.
+hope so jesa bataya besa hua hogaa..
+
+Happy Chocolate Day 🍫...
+
+Because love deserves something sweet too.. ab mujse hmesha sweet sweet baate krna.. :D
+
+Chocolates box mai se last mai nikalna abhi nhi…
+
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+<h1></h1>
+<p>
+dekho teddy jesa to mai abhi kud ho rha hu.. to tum muje hi apna teddy smj skti ho.. :D
+
+nhi nhi nhi kuch to is din ke liye bhi khass h ayush ke pitare m....
+
+chalo to shuru ho jao alpins nikalna pr dhyn rhe sir vohi jo red card pr tumhe dikh rhi h.. khabardar jo uske alava kuch nikali..
+
+Happy Teddy Day 🧸...
+
+aare tumne iske heart pr press kiya ?? nhi.... kro ek baar..
+
+dekha rosahan kr diya na usse apne ek touch se tumne.. tum hohi aesi 
+
+“your touch was light, but it made his world brighter.”
+
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+<h1></h1>
+<p>
+chalo ab kuch promise krte h..
+thoodi kasme thode vaade likhte h..
+kisi kaach ki shishi mai band h jo vaade.. 
+vo saare raaz vayaa krte h..
+jaanana h tumhe vo vaade??
+to chalo agle padaao pr chalte h..
+
+to ho jao shuru.. nikalo alpins.. ab to idea ho gya hoga kese nikalni h or kon c nikalni h :D
+
+Happy Promise day 🤞...
+.
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+<h1></h1>
+<p>
+kiss Day ke liye to muje hi hona pdegaa sath.. tb hi maan payega..
+to abhi sirf Wish se kaam chalate h..
+
+Happy Kiss Day..
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+<h1></h1>
+<p>
+ab aesa lg rha h muje ki tum bahot khush or thodi emotions se bhari hongi..
+or tumhara maan kr rha hoga ek hug to banti h..
+but afsos nariyall nhi mila muje abhi tk to hug to nhi ho payegi :D :D
+koyi naa uska bhi ek jugar h..
+kuch to uske liye bhi khass h..
+shyd pasand aaye aesi hi bass aass h..
+
+nikalo alpins.. :D :D
+
+Happy Hug Day 🤗...
+</p>
+<button onclick="nextPage()">Next ❤️</button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page">
+<h1></h1>
+<p>
+
+Chalo ab is game ke antim padaao pr aate h..
+apko apke Valentain Gift se milate h..
+4ro kone mai lge 4 black ribbon khicho..
+supporting alpins hatao..
+box ko nikalo or dekho..
+.
+.
+.
+.
+kese lage..
+.
+.
+.
+.
+socha shyd pasand aaye..
+haar ladke ki khavish hoti h apni pasandida aurat ke liye ye lenaa
+or meri to pasandida bhi tum or ghr baali bhi..tum…
+Happy Valentines Day butaku....
+
+chalo ab bye...
+enjoy your day!!
+be happy ❤️
+</p>
+</div>
+
+<script>
+let current = 0;
+const pages = document.querySelectorAll('.page');
+
+function nextPage() {
+    pages[current].classList.remove('active');
+    current++;
+    pages[current].classList.add('active');
+}
+
+function unlockStart() {
+    const startContent = document.getElementById('startContent');
+    const readyBtn = document.querySelector('.ready-btn');
+
+    readyBtn.style.display = 'none';
+    startContent.style.display = 'block';
+}
+
+/* Floating hearts */
+setInterval(() => {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '💕';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+}, 450);
+</script>
+
+</body>
+</html>

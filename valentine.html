@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine</title>
+
+<style>
+    body {
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #ffccd5, #ffe6eb);
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    img {
+        width: 220px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        color: #e6005c;
+        margin-bottom: 10px;
+    }
+
+    #message {
+        color: #b30047;
+        font-size: 16px;
+        min-height: 24px;
+    }
+
+    .buttons {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+    }
+
+    #yes {
+        background: #ff4d88;
+        color: white;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+
+    #no {
+        background: #888;
+        color: white;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDM0bTdieGdqMGcyZjZncmVrdWRkYXA2cmZvNHp4cDcwaHZiZDhhYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NkTiw9fQANbqV6L2kH/giphy.gif" alt="Valentine">
+<h1> Butaku ji, Will you be my Valentine? 💖</h1>
+<div id="message"></div>
+
+<div class="buttons">
+    <button id="yes">Yes 💘</button>
+    <button id="no">No 💔</button>
+</div>
+
+<script>
+    const noBtn = document.getElementById("no");
+    const msg = document.getElementById("message");
+
+    let scale = 1;
+    let escapeCount = 0;
+
+    const messages = [
+        "Nice try 😏",
+        "Achaa mana krogi 😈",
+        "soch lo ek baar phir",
+        "No krke dikho mai bhi dekhta hu",
+        "bol bhi do naa Yes kyu sata rhi ho",
+        "Not happening 😂",
+        "You're gonna have to say yes 💕",
+        "Why are you running? 🏃‍♀️",
+        "Just click yes already 😈"
+    ];
+
+    function moveNoButton() {
+        escapeCount++;
+
+        // Shrink the button slightly each time
+        scale = Math.max(0.5, scale - 0.05);
+        noBtn.style.transform = `scale(${scale})`;
+
+        // Random teasing message
+        msg.textContent = messages[Math.floor(Math.random() * messages.length)];
+
+        // Keep button inside viewport
+        const padding = 20;
+        const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+        const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        noBtn.style.left = `${x}px`;
+        noBtn.style.top = `${y}px`;
+    }
+
+    // Desktop
+    noBtn.addEventListener("mouseover", moveNoButton);
+
+    // Mobile
+    noBtn.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        moveNoButton();
+    });
+
+    document.getElementById("yes").addEventListener("click", () => {
+        document.body.innerHTML = `
+            <h1 style="color:#e6005c">YAYYY!!! 💕🥰</h1>
+            <p style="font-size:20px">Best decision ever 😌</p>
+        `;
+    });
+</script>
+
+</body>
+</html>
