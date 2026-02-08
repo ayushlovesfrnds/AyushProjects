@@ -120,25 +120,31 @@
 
     // Mobile
     noBtn.addEventListener("touchstart", (e) => {
-        e.preventDefault();
-        moveNoButton();
-    });
+    e.preventDefault();
+
+    // Vibrate device for 100ms
+    if (navigator.vibrate) {
+        navigator.vibrate(100);
+    }
+
+    moveNoButton();
+});
 
     document.getElementById("yes").addEventListener("click", () => {
         document.body.innerHTML = `
             <h1 style="color:#e6005c">YAYYY!!! 💕🥰</h1>
             <p style="font-size:20px">Best decision ever 😌
-            ab jb haa "yes" bol diya h to Gift bhi milna chahiye..
+ab jb haa "yes" bol diya h to Gift bhi milna chahiye..
 bikul milegaa..
 lgao avaaj Ayushi ko..
 bolo mera gift de muje..
 uske pass hi hai ajka apka gift 
 jaaiye or lijiye apna gift
-            </p>
+
+</p>
         `;
     });
 </script>
 
 </body>
 </html>
-
